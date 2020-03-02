@@ -14,5 +14,7 @@ def kvadrat(vnos):
 if __name__ == "__main__":
     N = int(input("Vnesite st: "))
     kvadrat(N)
+    print("This is it huh?")
+
 
 

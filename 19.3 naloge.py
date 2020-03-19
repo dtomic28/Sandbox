@@ -26,9 +26,9 @@ def besede(seznamBesed): #definiramo podmetodo besede z vhodno spremenljivko sez
     print("Najmanjša vrednost je: %s" %minNiz) #izpis najkrajšega niza
 
 
-def najpogostejsaCrka(arr):
+def najpogostejsaCrka(seznam):
     dic = {} #naredimo nov slovar
-    for i in arr: #za vsako črko v seznamu
+    for i in dic: #za vsako črko v seznamu
         for crke in i: #za vsako črko v besedi
             if crke not in dic: #če ni črka v slovarju 
                 dic[crke]=1 #nastavimo vrednost ključa v tem primeru črka na 1

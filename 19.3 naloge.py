@@ -39,55 +39,38 @@ def najpogostejsaCrka(seznam):
 
 #prva
 
-def prastevila(seznamStevil):
-    sez = []
-    for i in seznamStevil:
-        if i>1:
-            for j in range(2, i):
-                if i%j==0:
+def prastevila(sez):
+    l = []
+    for items in sez:
+        if items>1:
+            for i in range(2, items):
+                if items%i==0:
                     break
             else:
-                sez.append(i)   
-    print(sez)
+                l.append(i)   
+    print(l)
 
 
-#druga
-
-def najpogostejseStevilo(seznamStevil):
-    seznamStevil.sort()
-    najPogostejeSt = 0
-    najPogostejeSTEVKA = ""
-    stetje = 0
-    trenutna = "a"
-    for i in seznamStevil:
-        if i!=trenutna:
-            stetje = 1
-            trenutna = i
-        if stetje > najPogostejeSt:
-            najPogostejeSt = stetje
-            najPogostejeSTEVKA = str(i)
-        else:
-            stetje += 1
-    print(najPogostejeSTEVKA)
-        
+def najpogostejseStevilo(sez):
+    dic = {}
+    for items in sez:
+        if items not in dic:
+            dic[items] = 1
+        else: 
+            dic[items] += 1
+    maximum = max(dic, key=dic.get) #dobimo najbolj pogosto črko v seznamu
+    print(maximum) #in jo izpišemo
 
 def najpogostejsaBeseda(besedilo):
     besedilo = besedilo.split()
-    besedilo.sort()
-    najPogostejeSt = 0
-    najPogostejeSTEVKA = ""
-    stetje = 0
-    trenutna = "a"
-    for i in besedilo:
-        if i!=trenutna:
-            stetje = 1
-            trenutna = i
-        if stetje > najPogostejeSt:
-            najPogostejeSt = stetje
-            najPogostejeSTEVKA = str(i)
-        else:
-            stetje += 1
-    print(najPogostejeSTEVKA)
+    dic = {}
+    for items in besedilo:
+        if items not in dic:
+            dic[items] = 1
+        else: 
+            dic[items] += 1
+    maximum = max(dic, key=dic.get) #dobimo najbolj pogosto črko v seznamu
+    print(maximum) #in jo izpišemo
 
 
 

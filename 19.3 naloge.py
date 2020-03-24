@@ -37,6 +37,78 @@ def najpogostejsaCrka(seznam):
     maximum = max(dic, key=dic.get) #dobimo najbolj pogosto črko v seznamu
     print(maximum) #in jo izpišemo
 
+#prva
+
+def prastevila(seznamStevil):
+    sez = []
+    for i in seznamStevil:
+        if i>1:
+            for j in range(2, i):
+                if i%j==0:
+                    break
+            else:
+                sez.append(i)   
+    print(sez)
 
 
-    
+#druga
+
+def najpogostejseStevilo(seznamStevil):
+    seznamStevil.sort()
+    najPogostejeSt = 0
+    najPogostejeSTEVKA = ""
+    stetje = 0
+    trenutna = "a"
+    for i in seznamStevil:
+        if i!=trenutna:
+            stetje = 1
+            trenutna = i
+        if stetje > najPogostejeSt:
+            najPogostejeSt = stetje
+            najPogostejeSTEVKA = str(i)
+        else:
+            stetje += 1
+    print(najPogostejeSTEVKA)
+        
+
+def najpogostejsaBeseda(besedilo):
+    besedilo = besedilo.split()
+    besedilo.sort()
+    najPogostejeSt = 0
+    najPogostejeSTEVKA = ""
+    stetje = 0
+    trenutna = "a"
+    for i in besedilo:
+        if i!=trenutna:
+            stetje = 1
+            trenutna = i
+        if stetje > najPogostejeSt:
+            najPogostejeSt = stetje
+            najPogostejeSTEVKA = str(i)
+        else:
+            stetje += 1
+    print(najPogostejeSTEVKA)
+
+
+
+        
+
+def rekurzijaPrastevila(st):
+    if st>1:
+        for j in range(2, st):
+            if st%j==0:
+                rekurzijaPrastevila(st-1)
+        else:
+            print(st)
+            rekurzijaPrastevila(st-1)
+    else:
+        print("konec")
+
+rekurzijaPrastevila(100)
+
+
+
+
+
+
+        

@@ -1,26 +1,8 @@
-"""
-def sodoStevilka(x):
-    for i in range(1, x+1):
-        vrstica = ""
-        for j in range(1, x+1):
-            if i==x//2+1 or j==x//2+1 and i==x or i==1 or j==x or j==1:   
-                vrstica += str(i)+""
-            else:
-                vrstica += "0 "
-        print(vrstica)
+def presses(phrase):
+    l = [["a", "b", "c"]["d", "e", "f"]["g", "h", "i"]["j","k","l"]["m","n","o"]["p","q","r","s"]["t","u","v"]["w","x","y","z"][" "]]
+    phrase = phrase.lower()
+    for c in phrase:
+        [(i, l.index(c)) for i, j in enumerate(l) if c in l]
 
 
-vnos = int(input("Vnesite stevilo x: "))
-sodoStevilka(vnos)
-    
-"""
-
-from tkinter import *
-root = Tk()
-
-root.geometry = "300x400"
-
-
-
-
-
+presses("phrase")

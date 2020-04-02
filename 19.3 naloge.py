@@ -58,8 +58,8 @@ def najpogostejseStevilo(sez):
             dic[items] = 1
         else: 
             dic[items] += 1
-    maximum = max(dic, key=dic.get) #dobimo najbolj pogosto črko v seznamu
-    print(maximum) #in jo izpišemo
+    maximum = max(dic, key=dic.get)
+    print(maximum) 
 
 def najpogostejsaBeseda(besedilo):
     besedilo = besedilo.split()
@@ -69,8 +69,8 @@ def najpogostejsaBeseda(besedilo):
             dic[items] = 1
         else: 
             dic[items] += 1
-    maximum = max(dic, key=dic.get) #dobimo najbolj pogosto črko v seznamu
-    print(maximum) #in jo izpišemo
+    maximum = max(dic, key=dic.get) 
+    print(maximum) 
 
 
 

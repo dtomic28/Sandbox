@@ -87,11 +87,12 @@ def rekurzijaPrastevila(st):
     else:
         print("konec")
 
-rekurzijaPrastevila(100)
-
-
-
-
-
-
-        
+def kvadrat(n):
+    for i in range(n):
+        vrstica = ""
+        for j in range(n):
+            if i==j:
+                vrstica += "1 "
+            else:
+                vrstica += "0 "
+        print(vrstica)

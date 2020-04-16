@@ -21,4 +21,4 @@ def razlicneBesede(niz): #definiramo podmetodo razlicne besede z vhodnim nizom
     niz = re.split(', |_|-|!| ', niz) #razdvojimo niz v besede
     s = set(niz) #dodamo besede v množico
     print(s) #izpišemo množico
-    
+

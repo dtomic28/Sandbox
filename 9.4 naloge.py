@@ -18,7 +18,19 @@ def tehnica(stevila): #definiramo podmetodo tehnica z vhodnim seznamom stevila
 
 def razlicneBesede(niz): #definiramo podmetodo razlicne besede z vhodnim nizom
     niz = niz.lower() #pretvorimo v male crke
-    niz = re.split(', |_|-|!| ', niz) #razdvojimo niz v besede
-    s = set(niz) #dodamo besede v množico
-    print(s) #izpišemo množico
+    niz = re.split(', |_|-|!| ', niz) #razdvojimo niz v besed
+    dic = {}
+    for items in niz:
+        if items not in dic:
+            dic[items] = 1
+        else:
+            dic[items] += 1
+    for k,v in dic.items():
+        print(k, v)
 
+
+if __name__ == "__main__":
+    vnos = input('vnesite st: ')
+    razlicneBesede(vnos)
+
+   

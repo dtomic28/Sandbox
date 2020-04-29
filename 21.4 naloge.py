@@ -11,6 +11,3 @@ def razlicneBesede(niz): #definiramo podmetodo razlicne besede z vhodnim nizom
             dic[items] += 1 #prištejemo kolikokrat se pojavi
     [print(k, v) for k,v in dic.items()] #izpisemo vsako besedo in kolikorkrat se pojavi
     
-
-
-

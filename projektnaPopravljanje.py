@@ -1,11 +1,4 @@
 import random
-#initializacija programa in delovanja
-rezultat = [
-    ["  ", "  ", "  ","  "],
-    ["  ", "  ", "  ","  "],
-    ["  ", "  ", "  ","  "],
-    ["  ", "  ", "  ","  "]
-]
 
 def izpis():
     tabela = ['+-1-+-2-+-3-+-4-+', 
@@ -43,5 +36,13 @@ def isOver(board):
     if len(set([r[i] for i, r in enumerate(board)]))==1 and "  " not in set([r[i] for i, r in enumerate(board)]) or len(set([r[-i-1] for i, r in enumerate(board)]))==1 and "  " not in set([r[-i-1] for i, r in enumerate(board)]):
         return True
     return False
+
+#Zacenjanje Igre
+rezultat = [
+    ["  ", "  ", "  ","  "],
+    ["  ", "  ", "  ","  "],
+    ["  ", "  ", "  ","  "],
+    ["  ", "  ", "  ","  "]
+]
 
 

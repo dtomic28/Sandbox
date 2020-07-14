@@ -1,5 +1,9 @@
 #I am testing some classes glhf
 
+"""
+hey guys my name is Danijel and im just testing this stuff 
+"""
+
 class idk:
     def __init__(self):
         self.board = [

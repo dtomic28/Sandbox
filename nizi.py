@@ -6,7 +6,7 @@ def crke(niz):
     array = niz[i]  #spremenljivko array nastavimo na crko glede na stetje v zanki
     print(array) #ispis te crke
 
-crke(vnos)
+
 
 
 
@@ -16,7 +16,7 @@ def obrni(niz):
     vsota += niz[i] #doda crko na spremenjlivko
   print(vsota) #izpise spremenljivko
 
-obrni(vnos)
+
 
 
 
@@ -27,7 +27,7 @@ def sodoCrke(niz):
       vsota += niz[i] #bomo dodali črko v niz
   print(vsota) #ispis niza
 
-sodoCrke(vnos)
+
 
 
 
@@ -49,4 +49,26 @@ def najpogostejsaCrka(niz):
       if ponavljajoce[el][1]>=ponavljajoce[els][1]: #če se bodo ponovile črke večkrat 
         print(ponavljajoce[el][0]) #jo izpišemo
     
-najpogostejsaCrka(vnos)
+
+
+
+
+
+
+
+def najpogostejse(niz):
+  slovar = {} 
+  for i in niz:
+    if i not in slovar:
+      slovar[i] = 1
+    else:
+      slovar[i] += 1
+  najVecje = 0
+  najCrka = ""
+  for k,v in slovar.items():
+    if v>najVecje:
+      najCrka = k
+      najVecje = v
+  print(najVecje, najCrka)
+
+

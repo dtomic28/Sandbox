@@ -37,3 +37,12 @@ def metoda5(niz): #definiramo metodo z vhodno spremenljivko niz
             return "" + metoda5(niz[1:]) #vrnemo prazen niz in kličemo metodo naprej z nizom brez prvega znaka
         else: #će ne
             return niz[0] + metoda5(niz[1:]) #vrnemo prvi znak niza in kličemo rekurizjo na krajši niz za en znak
+
+def forr(n,st=0):
+    if st == n:
+        return
+    else:
+        print(st)
+        forr(n, st+1)
+
+forr(12)

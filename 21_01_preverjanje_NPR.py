@@ -25,7 +25,7 @@ class skladba: #definiramo razred skladba
         if len(self.izvajalec) == 0: #če je konec rekurzije 
             return "" #vrnemo prazen niz
         else: #če še ni konec
-            return obrniRec(self.izvajalec[1:]) + self.izvajalec[0] #se poglobimo v rekurzijo
+            return obrniRec(self.izvajalec[1:]) + self.izvajalec[0]#se poglobimo v rekurzijo
 
     def steviloBesed(self):#ustvarimo metodo stevilo besed 
         besed = self.besedilo #naredimo nov niz, ki zato da nebomo spreminjali orginalnega
@@ -65,3 +65,5 @@ def cenzura(self, sez):
     for i in sez:
         self.besedilo.replace(i, "#" * len(i))
     print(self.besedilo)
+
+#yes

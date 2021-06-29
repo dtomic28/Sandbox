@@ -19,7 +19,7 @@ def kvadrat(beseda):
     for i in range(len(beseda)):
         vrstica = ""
         for j in range(len(beseda)):
-            if i<=len(beseda)/3 and j<=len(beseda)/3 or i>len(beseda)/3 and j>len(beseda)/3:
+            if i<=len(beseda)/3 and j<=len(beseda)/3 or j>len(beseda)/3 and i>len(beseda)/3:
                 vrstica += "0 "
             else:
                 vrstica += beseda[i] + " "
@@ -28,4 +28,5 @@ def kvadrat(beseda):
 def prestejPodniz(niz, podniz):
     while stetje!=len(niz):
         stetje = 0
-        
+
+kvadrat("beseda")

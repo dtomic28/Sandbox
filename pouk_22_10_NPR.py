@@ -45,4 +45,4 @@ def forr(n,st=0):
         print(st)
         forr(n, st+1)
 
-forr(12)
+print(metoda3(4))

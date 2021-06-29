@@ -27,3 +27,19 @@ zunanja(9)
 
 
 """
+
+def trikotnik(n):
+    if n == 0:
+        return 
+    else:
+        trikotnik(n-1)
+        print(n * "* ")
+        
+
+def trikotnik(n):
+    if n == 0:
+        return 
+    else:
+        print(n * "* ")
+        trikotnik(n-1)
+        

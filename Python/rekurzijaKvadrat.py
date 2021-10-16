@@ -17,7 +17,7 @@ def zunanja(st, i=0):
         print(notranja(st, j, i))
         return zunanja(st, i+1)
 
-zunanja(9)
+zunanja(11)
 
 """
 1 0 0 0

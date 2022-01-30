@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.lang.Math;
+import java.io.*;
 
 public class App {
 
@@ -199,7 +200,37 @@ public class App {
         System.out.printf("Stevilo je: %x", st);
     }
 
-    public static void main(String[] args) throws Exception {
+    public static boolean aliJePrastevilo(int st){
+        if(st>1){
+            for(int i = 2; i<st; i++){
+                if(st%i==0){
+                    return(false);    
+                }
+            }
+        }return(true);
+    }   
+
+    
+    /*
+    public static void statistika(String[] naslov, int LetoIzdaje){
+        
+    }
+    */
+
+    public static void naloga3(String ime) throws IOException{
+        FileWriter fw = new FileWriter("uporabniki.txt");
+        BufferedWriter bw = new BufferedWriter(fw);
+        String uName = ime.replace(' ', '.').toLowerCase();
+        String pw = (ime.charAt(0) + "" + ime.charAt(ime.indexOf(' ') + 1)).toLowerCase();
+        while(pw.length() != 7){
+            pw += (int)(Math.random()*10) + "";
+        }
+        bw.write(String.format("%s, %s, %s", ime, uName, pw));
+        bw.close();
+        fw.close();
+    }
+
+    public static void main(String[] args) throws IOException {
         /*
         Scanner vhod = new Scanner(System.in);
         System.out.print("Vnesite število: ");
@@ -220,6 +251,8 @@ public class App {
         
         // System.out.print(vrniCrko("Yes",2));
 
-        izDesetVosem(255);
+        
+        //System.out.print(aliJePrastevilo(42));
+        naloga3("Matej Notesberg");
     }
 }

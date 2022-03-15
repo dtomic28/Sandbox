@@ -63,7 +63,8 @@ def preveriVX(x,sez):
             z = k
             k = index-1
     return max(sez)
-    
+
+
 def vertikalnoToHorizontalo(sez,y):
     arr = []
     for i in sez:

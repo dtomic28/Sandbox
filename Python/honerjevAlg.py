@@ -1,3 +1,5 @@
+#Sprogramiral Žan Hribar ta koda je njegovo avtorsko delo.
+
 sezSt=[3,5,-7,-9,4,4]
 sezDel=[]
 for i in range(1,abs(sezSt[-1])+1,1):

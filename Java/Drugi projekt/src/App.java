@@ -72,7 +72,7 @@ public class App {
 	}
 	
 	*/
-	
+	/*
 	public static void naloga1(int p, String pon){
         if(p==0){
             return;
@@ -118,11 +118,30 @@ public class App {
         int sirina = vhod.nextInt();
         naloga3(naloga3Fill(sirina), 0, sirina);
     }
-    
+	
+	*/
+
+	public static String naloga1(String str, int c){
+		if(c==str.length()){
+			return("");
+		}else{
+			//System.out.println(str.charAt(c));
+			return(naloga1(str,c+=1) + str.charAt(c-1));
+		}
+	}
+
+	public static int naloga2(int[] stevila, int c){
+		if(c==stevila.length){
+			return(0);
+		}else{
+			return(stevila[c] + naloga2(stevila, c+=1));
+		}
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		naloga3input();
+		int[] stevila = {3,5,7,3}; 	
+		System.out.println(naloga2(stevila, 0));
 		
 	}
 }

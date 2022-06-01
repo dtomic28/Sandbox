@@ -230,6 +230,22 @@ public class App {
         fw.close();
     }
 
+    public static boolean aliJePalindrom(String niz, int i){
+        if(niz.length()/2 == i){
+            if(niz.charAt(i) == niz.charAt((niz.length()-1)-i)){
+                return(true);
+            }else{
+                return(false);
+            }
+        }else{
+            if(niz.charAt(i) != niz.charAt((niz.length()-1)-i)){
+                return(false);
+            }else{
+                return(aliJePalindrom(niz, i+1));
+            }
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         /*
         Scanner vhod = new Scanner(System.in);
@@ -253,6 +269,6 @@ public class App {
 
         
         //System.out.print(aliJePrastevilo(42));
-        naloga3("Matej Notesberg");
+        System.out.println(aliJePalindrom("abcddgcba", 0));
     }
 }
